@@ -1,0 +1,30 @@
+<section>
+  <div class="bg-blue-500">
+    <div class="h-16 flex justify-between items-center max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto">
+      <%= image_tag('menu.svg', alt: 'Menu', class: "w-6 h-6") %>
+      <h2 class="text-2xl text-white font-semibold">Categories</h2>
+      <%= image_tag('search.svg', alt: 'Search', class: "w-6 h-6") %>
+    </div>
+  </div>
+  <article class="flex flex-col gap-y-4 max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl my-4 mx-auto">
+    <% @groups.each do |group| %>
+      <%= link_to group_path(group) do %>
+      <div class="flex gap-x-4 border border-stone-950 p-2 bg-white">
+        <img class="w-20 h-20" src=<%= group.icon %> >
+        <div class="flex justify-between w-full my-2">
+          <div class="flex flex-col justify-between">
+            <h2 class="text-lg font-bold"><%= group.name %></h2>
+            <p><%= group.created_at.strftime('%m-%d-%Y') %></p>
+          </div>
+          <p class="font-bold">$5</p>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+    <div class="flex justify-center">
+      <%= link_to new_group_path, class: 'bg-green-500 px-4 py-1 rounded text-white font-semibold' do %>
+        Add new Category
+      <% end %>
+    </div>
+  </article>
+</section>
