@@ -10,12 +10,12 @@ RSpec.describe Operation, type: :model do
   describe 'Foreign keys' do
     it { should belong_to(:user) }
   end
-  
+
   describe 'Has many...' do
     it { should have_many(:group_operations) }
     it { should have_many(:groups) }
   end
-  
+
   describe 'Validations' do
     it { should validate_presence_of(:name) }
     it { is_expected.to validate_numericality_of(:amount).is_greater_than_or_equal_to(0) }

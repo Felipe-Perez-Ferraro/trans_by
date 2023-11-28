@@ -10,12 +10,12 @@ RSpec.describe Group, type: :model do
   describe 'Foreign keys' do
     it { should belong_to(:user) }
   end
-  
+
   describe 'Has many...' do
     it { should have_many(:group_operations) }
     it { should have_many(:operations) }
   end
-  
+
   describe 'Validations' do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:icon) }

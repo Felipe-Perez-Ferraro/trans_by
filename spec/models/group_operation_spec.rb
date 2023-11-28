@@ -8,7 +8,7 @@ RSpec.describe GroupOperation, type: :model do
     @operation = Operation.create(name: 'Transaction', amount: 1000, author_id: @user)
     GroupOperation.create(group_id: @group, operation_id: @operation)
   end
-  
+
   describe 'Foreign keys' do
     it { should belong_to(:group) }
     it { should belong_to(:operation) }
