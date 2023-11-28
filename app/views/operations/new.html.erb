@@ -1,0 +1,28 @@
+<section>
+  <div class="bg-blue-500">
+    <div class="h-16 flex justify-between items-center max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto">
+      <%= link_to group_path(@group.id), class: "text-2xl text-white" do %>  
+        <
+      <% end %>
+      <h2 class="text-2xl text-white font-semibold">New Transaction</h2>
+      <%= image_tag('menu.svg', alt: 'Search', class: "w-6 h-6") %>
+    </div>
+  </div>
+  <article class="flex flex-col gap-y-2 max-w-sm md:max-w-lg lg:max-w-xl my-4 mx-auto">
+    <%= form_with model: @operation, url: group_operations_path(@group), method: :post do |f| %>
+      <div class="flex flex-col gap-y-1">
+        <%= f.label :name, class:"font-semibol text-stone-950 text-md" %>
+        <%= f.text_field :name, class:"rounded" %>
+      </div>
+      
+      <div class="flex flex-col gap-y-1">
+        <%= f.label :amount, class:"font-semibol text-stone-950 text-md" %>
+        <%= f.number_field :amount, class:"rounded" %>
+      </div>
+
+      <div class="flex justify-center">
+        <%= f.submit "Add Transaction", class:"border rounded font-bold text-md py-1 px-4 text-white mt-3 cursor-pointer bg-green-400" %>
+      </div>
+    <% end %>
+  </article>
+</section>
