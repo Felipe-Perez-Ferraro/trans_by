@@ -1,11 +1,13 @@
 class GroupsController < ApplicationController
   def index
     @user = current_user
-    @groups = @user.groups.all
+    @groups = @user.groups.includes(:operations).all
+    @operations = @user.operations
   end
 
   def show
     @group = Group.find(params[:id])
+    @operations = @group.operations.order(created_at: :desc)
   end
 
   def new
