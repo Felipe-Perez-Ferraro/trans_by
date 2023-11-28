@@ -70,7 +70,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Website](https://trans-by.onrender.com)
+- [Project Video Presentation]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
