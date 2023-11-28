@@ -8,7 +8,7 @@
   </header>
   <article class="flex flex-col gap-y-4 max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl my-4 mx-auto">
     <% @groups.each do |group| %>
-      <%= link_to group_path(group.id) do %>
+      <%= link_to group_path(group.id), class: 'details_link' do %>
       <div class="flex gap-x-4 border border-gray-200 p-2 bg-white shadow-lg">
         <img class="w-20 h-20" src=<%= group.icon %> >
         <div class="flex justify-between w-full my-2">
