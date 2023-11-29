@@ -29,9 +29,11 @@
       </div>
     <% end %>
   </article>
-  <div class="absolute right-2 bottom-3">
-      <%= link_to new_group_operation_path(@group), class: 'bg-green-500 px-4 py-2 rounded text-white font-semibold' do %>
-        Add new Transaction
-      <% end %>
-    </div>
+  <div class="fixed bottom-0 left-0 w-full bg-green-500 p-6 text-center">
+    <%= link_to new_group_operation_path(@group) do %>
+      <div class="bg-green-500 border border-black p-2 border border-slate-50">
+        <p class="text-white font-semibold">Add new Transaction</p>
+      </div>
+    <% end %>
+  </div>
 </section>

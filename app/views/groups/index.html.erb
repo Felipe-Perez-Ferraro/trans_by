@@ -21,9 +21,11 @@
       </div>
       <% end %>
     <% end %>
-    <div class="absolute right-2 bottom-3">
-      <%= link_to new_group_path, class: 'bg-green-500 px-4 py-2 rounded text-white font-semibold' do %>
-        Add new Category
+    <div class="fixed bottom-0 left-0 w-full bg-green-500 p-6 text-center">
+      <%= link_to new_group_path do %>
+        <div class="bg-green-500 border border-black p-2 border border-slate-50">
+          <p class="text-white font-semibold">Add new Category</p>
+        </div>
       <% end %>
     </div>
   </article>
