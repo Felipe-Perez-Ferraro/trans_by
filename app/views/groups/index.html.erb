@@ -1,0 +1,32 @@
+<section>
+  <header class="bg-blue-500">
+    <nav class="h-16 flex justify-between items-center max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto">
+      <%= image_tag('menu.svg', alt: 'Menu', class: "w-5 h-5") %>
+      <h2 class="text-2xl text-white font-semibold">Categories</h2>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "text-md text-white" %>
+    </nav>
+  </header>
+  <article class="flex flex-col gap-y-4 max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl my-4 mx-auto">
+    <% @groups.each do |group| %>
+      <%= link_to group_path(group.id), class: 'details_link' do %>
+      <div class="flex gap-x-4 border border-gray-200 p-2 bg-white shadow-lg">
+        <img class="w-20 h-20" src=<%= group.icon %> >
+        <div class="flex justify-between w-full my-2">
+          <div class="flex flex-col justify-between">
+            <h2 class="text-lg font-bold"><%= group.name %></h2>
+            <p><%= group.created_at.strftime('%m-%d-%Y') %></p>
+          </div>
+          <p class="font-bold">$<%= group.operations.sum { |op| op.amount } %></p>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+    <div class="fixed bottom-0 left-0 w-full bg-green-500 p-6 text-center">
+      <%= link_to new_group_path do %>
+        <div class="bg-green-500 border border-black p-2 border border-slate-50">
+          <p class="text-white font-semibold">Add new Category</p>
+        </div>
+      <% end %>
+    </div>
+  </article>
+</section>

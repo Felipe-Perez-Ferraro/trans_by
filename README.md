@@ -70,7 +70,8 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
+- [Website](https://trans-by.onrender.com)
+- [Project Video Presentation](https://www.loom.com/share/5778f94ee425492eaf6b35a6b2a3f591?sid=04fffdaa-9fca-4e4b-9af0-f30a4c422c38)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +166,7 @@ If you like this project please share with your friends and family!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for teach me and support me to do this
+I would like to thank Microverse for teach me and support me to do this and Gregoire Vella for give the design of the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
