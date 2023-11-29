@@ -1,0 +1,39 @@
+<section>
+  <header class="bg-blue-500">
+    <nav class="h-16 w-full flex items-center justify-between max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-4xl mx-auto">
+      <%= link_to groups_path, class: "text-md text-white" do %>
+        <
+      <% end %>
+      <h2 class="text-2xl font-semibold text-white">Details</h2>
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, data: { turbo_method: :delete }, class: "text-md text-white" %>
+      <% end %>
+    </nav>
+  </header>
+  <article class="flex flex-col max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl my-4 mx-auto">
+    <div class="flex gap-x-4 items-center p-2 bg-white border-b border-gray-200">
+      <img class="w-20 h-20" src=<%= @group.icon %> >
+      <h2 class="text-lg font-bold"><%= @group.name %></h2>
+      <p class="ml-auto">Total: $<%= @operations.sum { |op| op.amount } %></p>
+    </div>
+    <% @operations.each do |op| %>
+      <div class="flex flex-col gap-y-6 p-2 bg-white">
+        <div class="border-b">
+          <h3 class="text-lg font-semibold"><%= op.name %> Nº<%= op.id %></h3>
+          <p class="text-sm text-gray-500 mb-4"><%= op.created_at.strftime('%m-%d-%Y') %></p>
+          <div class="flex justify-between items-center border-b border-gray-200"
+            <h3 class="text-md font-bold">TOTAL PAYMENT</h3>
+            <p class="text-md font-bold">$<%= op.amount %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </article>
+  <div class="fixed bottom-0 left-0 w-full bg-green-500 p-6 text-center">
+    <%= link_to new_group_operation_path(@group) do %>
+      <div class="bg-green-500 border border-black p-2 border border-slate-50">
+        <p class="text-white font-semibold">Add new Transaction</p>
+      </div>
+    <% end %>
+  </div>
+</section>

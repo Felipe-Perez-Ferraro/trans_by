@@ -1,0 +1,9 @@
+<section class="flex justify-center items-center h-screen">
+  <article class="flex flex-col gap-y-20 border-2 border-stone-950 rounded py-28 px-8">
+    <h1 class="text-6xl font-bold text-stone-950">Trans By</h1>
+    <div class="flex flex-col gap-y-2">
+      <%= link_to "Log In", new_user_session_path, notice: 'Complete the fields below', class: 'bg-blue-400 py-2 rounded text-center text-white text-lg' %>
+      <%= link_to "Sign In", new_user_registration_path, notice: 'Complete the fields below', class: 'py-2 rounded text-center text-black text-lg' %>
+    </div>
+  </article>
+</section>
