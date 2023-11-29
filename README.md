@@ -166,7 +166,7 @@ If you like this project please share with your friends and family!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for teach me and support me to do this
+I would like to thank Microverse for teach me and support me to do this and Gregoire Vella for give the design of the website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
